@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15" version="24.8.3">
+  <diagram id="EQN5sHpQGN3ZQcjnaEqw" name="Page-1">
+    <mxGraphModel dx="1434" dy="827" grid="1" gridSize="15" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Ap4f_nKeKA6hb5JGFMrc-21" value=":BestFitDecreasing" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="180" y="165" width="120" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Ap4f_nKeKA6hb5JGFMrc-23" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="Ap4f_nKeKA6hb5JGFMrc-21">
+          <mxGeometry x="55" y="60" width="10" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="Ap4f_nKeKA6hb5JGFMrc-22" value=":Packer" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="414" y="165" width="100" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Ap4f_nKeKA6hb5JGFMrc-24" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="Ap4f_nKeKA6hb5JGFMrc-22">
+          <mxGeometry x="45" y="60" width="10" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="Ap4f_nKeKA6hb5JGFMrc-25" value="DoesFit (Box, Product)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="245" y="255" as="sourcePoint" />
+            <mxPoint x="459" y="255" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ap4f_nKeKA6hb5JGFMrc-26" value="return Boolean" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1" target="Ap4f_nKeKA6hb5JGFMrc-23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="459" y="285" as="sourcePoint" />
+            <mxPoint x="255" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ap4f_nKeKA6hb5JGFMrc-27" value="PlaceItem (Box, Product)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" source="Ap4f_nKeKA6hb5JGFMrc-23" target="Ap4f_nKeKA6hb5JGFMrc-24">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="255" y="330" as="sourcePoint" />
+            <mxPoint x="454" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

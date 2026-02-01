@@ -1,0 +1,124 @@
+/* Main Background */
+QWidget {
+    background-color: #038992; /* Neutral teal background */
+}
+
+QWidget#central_widget {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px; /* Neutral gray for central widget */
+}
+
+/* Frames and Containers */
+QFrame {
+    background-color: #FFE9EE; /* Light pink for frame background */
+    border: 2px solid #7d97a5; /* Neutral contrasting border */
+    border-radius: 10px;
+    padding: 10px; /* Consistent internal spacing */
+    margin: 10px; /* Consistent external spacing */
+}
+
+QFrame#order_selection_frame,
+QFrame#box_info_frame,
+QFrame#order_info_frame {
+    background-color: #ffffff; /* White for high contrast */
+    padding: 10px; /* Match frame padding */
+    margin: 10px; /* Match frame margin */
+    border-radius: 10px;
+}
+
+/* Box Info Display */
+QLabel#box_info_display,
+QLabel#order_info_display,
+QLabel#box_info_label,
+QLabel#order_info_label,
+QLabel#order_list_label {
+    background-color: #e3e3e3; /* Neutral light gray for labels */
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 18px; /* Standardized font size */
+    font-weight: bold;
+    color: #810000; /* Deep red for text contrast */
+    text-align: center;
+}
+
+/* Top Order Info Label */
+QLabel#order_info_top {
+    min-height: 50px;
+    max-height: 50px;
+    background-color: #FFE9EE; /* Light pink for top label */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    color: #810000; /* Deep red text */
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+/* Order Listbox */
+QListWidget#order_listbox {
+    background-color: #e3e3e3; /* Neutral gray background */
+    font-weight: bold;
+    font-size: 18px; /* Consistent font size */
+    color: #810000; /* Deep red for text */
+    border-radius: 10px;
+    padding: 5px; /* Consistent internal spacing */
+    margin: 5px; /* Consistent external spacing */
+}
+
+/* Push Buttons */
+QPushButton {
+    background-color: #ff0000; /* Bright red for buttons */
+    color: white; /* White text */
+    padding: 10px; /* Consistent internal spacing */
+    font-size: 14px; /* Standardized font size */
+    border-radius: 5px;
+    margin: 5px; /* Consistent external spacing */
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #980707; /* Darker red on hover */
+}
+
+/* Close Button */
+QPushButton#close_button {
+    background-color: #00ffff; /* Cyan for distinction */
+    color: #0a0000; /* Dark text for contrast */
+    width: 120px; /* Consistent button width */
+    padding: 10px; /* Consistent internal spacing */
+    font-size: 14px; /* Standardized font size */
+    border-radius: 5px;
+    margin: 5px; /* Consistent external spacing */
+    font-weight: bold;
+}
+
+QPushButton#close_button:hover {
+    background-color: #0f5d5d; /* Darker cyan on hover */
+}
+
+/* Logo Label */
+QLabel#logo_label {
+    background-color: #FFE9EE; /* Light pink for frame background */
+    border-radius: 10px;
+    padding: 5px; /* Unified padding */
+    margin: 5px; /* Unified margin */
+}
+
+QLabel#logo_label:hover {
+    background-color: #8797a6; /* Grayish tone on hover */
+    border: 2px solid #0177b8; /* Neutral blue border on hover */
+    padding: 3px;
+}
+
+QFrame#plot_frame {
+    background-color: #ffffff; /* Neutral background for the plot */
+    border: 2px solid #7d97a5; /* Subtle contrasting border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Internal spacing */
+    margin: 10px; /* External spacing */
+}

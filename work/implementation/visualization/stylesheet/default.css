@@ -1,0 +1,126 @@
+/* Global Styles */
+
+QWidget {
+    background-color: rgb(162, 183, 180); /* Neutral gray background */
+}
+
+QWidget#central_widget {
+    background-color: #f8f8f8; /* Neutral gray for central widget */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Frames and Containers */
+QFrame {
+    background-color: #fffbe7;
+    border: 2px solid #a0b2a9;
+    border-radius: 10px;
+    padding: 10px; 
+    margin: 10px; 
+}
+
+QFrame#order_selection_frame,
+QFrame#box_info_frame,
+QFrame#order_info_frame {
+    background-color: #ffffff;
+}
+
+
+
+/* Labels */
+QLabel#box_info_display,
+QLabel#order_info_display,
+QLabel#box_info_label,
+QLabel#order_info_label,
+QLabel#order_list_label {
+    background-color: whitesmoke;
+    color: #1C4532;
+    text-align: center;
+    padding: 5px;  
+    margin: 5px;
+    font-size: 18px; 
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;    
+}
+
+
+/* Top Order Info Label */
+QLabel#order_info_top {
+    min-height: 50px;
+    max-height: 50px;
+    background-color: #fffbe7;
+    border-radius: 10px;
+    padding: 10px; /* Unified padding */
+    margin: 10px; /* Unified margin */
+    color: #1C4532;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Order Listbox */
+QListWidget#order_listbox {
+    background-color: whitesmoke;
+    font-weight: bold;
+    font-size: 18px;
+    color: #1C4532;
+    border-radius: 10px;
+    padding: 5px; 
+    margin: 5px; 
+}
+
+/* Push Buttons */
+QPushButton {
+    background-color: #1C4532;
+    color: white;
+    padding: 10px; /* Unified padding */
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 5px; /* Unified margin */
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #306e45;
+}
+
+/* Close Button */
+QPushButton#close_button {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px; /* Unified padding */
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 5px; /* Unified margin */
+    font-weight: bold;
+}
+
+QPushButton#close_button:hover {
+    background-color: #c9302c;
+}
+
+/* Logo Label */
+QLabel#logo_label {
+    background-color: #fffbe7;
+    border-radius: 10px;
+    padding: 5px; /* Unified padding */
+    margin: 5px; /* Unified margin */
+}
+
+QLabel#logo_label:hover {
+    background-color: #9da89e;
+    border: 2px solid #275027;
+    padding: 3px; /* Adjusted hover padding for alignment */
+}
+
+QFrame#plot_frame {
+    background-color: #ffffff; /* Neutral background for the plot */
+    border: 2px solid #7d97a5; /* Subtle contrasting border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Internal spacing */
+    margin: 10px; /* External spacing */
+}
+

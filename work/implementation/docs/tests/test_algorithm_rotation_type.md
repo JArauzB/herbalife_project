@@ -1,0 +1,1 @@
+::: tests.test_algorithm_rotation_type

@@ -1,0 +1,1 @@
+::: tests.test_algorithm_product_input_reader

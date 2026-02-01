@@ -1,0 +1,319 @@
+% !TEX root = ./main.tex
+
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{tikz}
+\usepackage{lscape} 
+
+
+\title{Project Charter - Herbalife Software Factory Cubing Algorithm}
+\author{Gabriele Lavinskaitė, Jorge Arauz, Julian Köser, Tim Baars}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+% This section provides a high-level overview of the project and its purpose.
+
+The purpose of this project is to develop a Python-based cubing algorithm for Herbalife's distribution center in Venray. The algorithm will optimize the packing of products into boxes based on volume and product dimensions, ensuring efficient space utilization and minimasing packaging costs. 
+
+\section{Business Case}
+
+\textbf{Problem Statement:}  
+\vspace{10pt}  
+
+Herbalife's current cubing algorithm calculates the surface area of products and compares it to the surface area inside the box. In theory, this should work; for example, if both the box and the products have dimensions that seem to fit, the algorithm selects the box. However, in practice, this method often fails to account for the real-world dimensions and shapes of the products. 
+For instance, a rectangular box may be chosen because it appears to fit the products based on their surface areas. But if one of the products is cylindrical, the algorithm doesn't account for the wasted space that arises from the product's irregular shape. The result is that products do not actually fit into the box, despite the algorithm indicating otherwise. 
+Additionally, Herbalife frequently launches new products with varying dimensions. The current algorithm is not robust enough to handle these new sizes and shapes effectively, leading to further inefficiencies. As new product dimensions are introduced, the limitations of the current algorithm become more pronounced, making it less scalable for future growth.
+
+\vspace{10pt}  
+
+\textbf{Impact on the Business:}  
+\vspace{10pt}  
+
+This miscalculation leads to increased costs and wasted time. Workers must manually repack the boxes when products don’t fit, which causes delays. In some cases, this results in a backlog of boxes at the end of the shift, which contradicts Herbalife's commitment to fast and efficient delivery.
+Another issue is that the current algorithm sometimes chooses boxes that are too large, meaning the company is essentially "shipping air." The algorithm is not optimizing space effectively—essentially, it is not "playing Tetris" by strategically arranging products to maximize space utilization.
+It's estimated that around 10\% of the small boxes selected by the current algorithm need to be repacked. Considering that thousands of boxes are shipped per day, this 4\% can represent a significant operational bottleneck, leading to delays, inefficiencies, and higher labor costs.
+\vspace{10pt}  
+
+\textbf{Objective of the Project:}  
+\vspace{10pt}  
+
+The aim of this project is to develop a new cubing algorithm that will optimize product arrangement within boxes—essentially playing "3D Tetris" with the products. The new algorithm will take into account both the dimensions and shapes of products, ensuring that boxes are selected and packed efficiently. This improvement will reduce manual repacking, minimize the number of oversized boxes used, and ultimately save both time and money for the business.
+
+\section{Approach}
+This part contains the proper information about the methodology used in this project, the roles of the members, project execution, Process Tracking and Stakeholder Engagement
+
+\subsection{Methodology}
+% Describe the methodology you are following. Jorge
+This project will utilize the Agile Scrum methodology, focusing on short, iterative development cycles. Scrum is chosen for its ability to be flexible and adaptable, making it well-suited for projects where user requirements are likely to change over time. The main goal of using such methodology is to be able to separate tasks which allows to get feedback constanly.
+
+The Agile planning will be divided into sprints, with each sprint having a duration of one week, starting every Thursday. Tasks will be distributed among the team at the beginning of each sprint. Once the sprint ends, a retrospective meeting will be held to gather feedback on the work completed. The tasks will be organized on a project board with five columns: Backlog, To Do, In Progress, In Review, and Done.
+
+\subsection{Roles}
+% Specify the roles of team members or stakeholders. Jorge
+For this project, a team of four members will be working, with each member assigned a role based on the Scrum methodology. Given the small team size, roles are divided into one Scrum Master and three developers. The Scrum Master will also contribute as a developer and will be responsible for facilitating Scrum meetings and ensuring that the team is free of any impediments.
+
+\subsection{Project Execution}
+
+We are following an Agile approach with weekly sprints from Thursday to Thursday. Each sprint delivers an incremental prototype, allowing for continuous improvement and adjustments based on feedback.\par
+
+The project is divided into four key phases:\par
+\vspace{10pt}  
+1. \textbf{Phase 1: Analysis (4 Sprints, Sept 11 – Oct 7)}\par
+   \textbf{Objective}: Gather requirements, understand current systems, and analyze the problem.\par
+   \textbf{Deliverables}: Requirements Specification, System Architecture, Feasibility Study.\par
+   \vspace{10pt}  
+2. \textbf{Phase 2: Design (2 Sprints, Oct 7 – Oct 21)}\par
+   \textbf{Objective}: Design system architecture, data models, and workflows.\par
+   \textbf{Deliverables}: Detailed system design, wireframes, workflow diagrams.\par
+   \vspace{10pt}
+3. \textbf{Phase 3: Development and Testing (7 Sprints, Oct 21 – Dec 16)}\par
+   \textbf{Objective}: Develop the core functionalities, implement the cubing algorithm, and integrate data processing modules. Testing is integrated within development sprints.\par
+   \textbf{Deliverables}: Working prototype of the algorithm, visual interface for product placement.\par
+   \vspace{10pt}
+4. \textbf{Phase 4: Handover and Deployment (1 Sprint, Dec 16 – Dec 23)}\par
+   \textbf{Objective}: Final handover of the project, including documentation, user manuals, and training sessions.\par
+   \textbf{Deliverables}: Final system.\par
+
+\subsection*{Process Tracking}
+Progress is tracked using Agile project management techniques, ensuring that the project stays on schedule and meets its objectives. The key elements of our process tracking include: \par
+
+1. \textbf{Sprint Planning}:  
+   At the start of each sprint (every Thursday), tasks are defined, responsibilities assigned, and clear sprint goals set. This ensures that each sprint has a focused set of deliverables.\par
+
+2. \textbf{Daily Standups}:  
+   Optional daily check-ins allow the team to quickly discuss progress, identify blockers, and ensure alignment. Tasks can be adjusted as needed to keep the project moving smoothly.\par
+
+3. \textbf{Sprint Reviews}:  
+   At the end of each sprint (every Thursday), a demo of the completed work is presented to stakeholders. Feedback gathered from these demos informs necessary adjustments in the following sprint.\par
+
+4. \textbf{Sprint Retrospectives}:  
+   After each sprint review, a retrospective is conducted to reflect on successes, challenges, and areas for improvement. This ensures continuous improvement and effective team collaboration.\par
+
+5. \textbf{Project Management Tools}:  
+   Progress is tracked using a \textbf{GitHub Scrum Board}, where all tasks are listed and updated throughout each sprint. Each task has clear descriptions, priorities, and deadlines, ensuring transparency in project progress.\par
+
+6. \textbf{Version Control}:  
+   \textbf{GitHub} is used for version control to track code changes and ensure that all team members have access to the latest version of the project. This helps avoid conflicts and ensures that all team members are aligned on the current state of the project.\par
+
+   \subsection*{Stakeholder Engagement}
+
+   Stakeholder engagement plays a crucial role in ensuring that the project meets the needs of Herbalife and aligns with business goals. Our primary stakeholder, Marc Wilmsen, acts as the \textbf{Product Owner} for this project, providing technical feedback and ensuring that the project stays on track.
+   
+   Key aspects of stakeholder involvement include:
+   
+   1. \textbf{Regular Feedback}: Marc Wilmsen is actively involved in the project, providing feedback during sprint reviews. His input ensures that the deliverables align with the stakeholder's expectations.
+   
+   2. \textbf{Bi-weekly Meetings}: Face-to-face meetings are scheduled once every two weeks to ensure close collaboration. These meetings provide an opportunity for detailed discussions about the project’s progress, any issues that arise, and strategic adjustments.
+   
+   3. \textbf{Product Owner Role}: Marc functions as the product owner, guiding the team through the project's objectives, ensuring alignment with the company’s goals, and validating deliverables throughout the development process.
+   
+   4. \textbf{Continuous Communication}: Ongoing communication is facilitated through platforms such as email and Microsoft Teams. This keeps stakeholders informed about the project's status and enables timely input when needed.
+   
+   This engagement strategy ensures that the project remains aligned with stakeholder expectations and business needs.
+   
+\section{In Scope/Out of Scope}
+
+\subsection{In Scope}
+The project will focus on delivering a new cubing algorithm that accurately determines the optimal box size for packing items based on both volume and dimensions. The current algorithm does not account for practical item arrangements (e.g., "Tetris-like" placement) and frequently misjudges smaller boxes—while items theoretically fit, the algorithm fails to consider real-world limitations. The updated algorithm will resolve these issues by ensuring that items are properly placed into boxes, taking into account both their size and orientation.
+
+\textbf{Key aspects in scope}:
+\begin{itemize}
+    \item Development of a Python-based cubing algorithm that considers both volume and item dimensions, including orientation and arrangement, ensuring more practical and efficient packing.
+    \item Accurate product placement within boxes, resolving issues with the current algorithm that incorrectly fits items into small boxes without optimizing orientation or arrangement.
+    \item Testing the algorithm with real-world product data to ensure it works in practical scenarios.
+    \item Integration of a 3D visual representation of how items should be arranged in boxes.
+    \item Documentation and user manuals for stakeholders explaining how to use and interact with the algorithm.
+\end{itemize}
+
+\subsection{Out of Scope}
+% The Out of Scope section is crucial in a project charter or plan because it clearly defines what the project will not cover, setting boundaries and managing expectations.
+Certain elements are outside the scope of this project, as they are not directly related to the development and implementation of the cubing algorithm:
+
+\textbf{Key aspects out of scope}:
+\begin{itemize}
+    \item Any modifications to the distribution center's physical infrastructure or packing lines.
+    \item Integration with systems outside of the cubing algorithm, such as shipping or inventory management software.
+    \item Handling of specific logistics or supply chain optimizations beyond the cubing algorithm.
+    \item Advanced features such as AI-driven feedback or machine learning for automatic box recommendations, which could be considered in future phases.
+    \item Addressing broader logistical concerns unrelated to the packing process, such as transportation or storage.
+\end{itemize}
+
+
+\subsection{Planning}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Month 1.png}
+    \caption{Project Timeline}
+    \label{fig:example_image}
+\end{figure}
+
+@test commit
+
+\section{Deliverables}
+
+The following are the key deliverables of the Project Cubing:
+
+\begin{itemize}
+    \item \textbf{Requirements Specification Document (RSD)}: A detailed document outlining the functional and non-functional requirements of the cubing algorithm based on discussions with Herbalife stakeholders. The RSD ensures alignment on what the system should do, covering aspects like the system's need to assign product positions based on weight, size, and demand.
+    
+    \item \textbf{Stakeholder Analysis}: A draft document that identifies the key stakeholders, their roles, and their expectations from the project, including both primary stakeholders (e.g., warehouse managers) and secondary stakeholders (e.g., IT teams). This ensures the project meets the needs of all users.
+    
+    \item \textbf{User Stories (Use Case Diagram)}: A visual representation mapping the interactions between users (actors) and the system, identifying key use cases, such as assigning product locations or retrieving product details.
+    
+    \item \textbf{Detailed Use Case Descriptions}: A comprehensive documentation of each use case, including actor roles, preconditions, steps, postconditions, and exceptions, ensuring a full understanding of system interactions.
+    
+    \item \textbf{System Architecture Diagram}: A comprehensive diagram illustrating the architecture of the cubing algorithm, including its integration with existing systems and tools.
+    
+    \item \textbf{Algorithm Analysis and Research Documentation}: A report documenting the analysis of a variety of algorithms and strategies, including hybrid approaches. This deliverable will identify the strengths, weaknesses, and potential areas for improvement, focusing on scalability, adaptability, and efficiency. The insights from this analysis will be used in the design and development of the optimized cubing algorithm.
+    
+    \item \textbf{Cubing Algorithm}: The core deliverable is the Python-based cubing algorithm capable of calculating the optimal box size by considering product dimensions, shapes, and orientation for efficient packing.
+    
+    \item \textbf{User Documentation}: Manuals and documentation to assist end users in interacting with the algorithm.
+    
+    \item \textbf{Project Reports}: Regular reports on the progress of the project, including sprint reviews, retrospectives, and stakeholder feedback summaries.
+
+    \item \textbf{Data Flow Diagrams}: Visual representations that map the flow of data through the system, ensuring clear understanding of data movement and processes.
+    
+    \item \textbf{Constraints and Assumptions Document}: A document outlining technical and operational constraints, as well as key assumptions made during the project.
+    
+    \item \textbf{Risk Analysis Matrix}: A matrix identifying potential project risks, including mitigation strategies.
+    
+    \item \textbf{Data Requirements Document}: An internal document defining key product and location master data required for the system to function.
+\end{itemize}
+
+
+\section{Quality Management}
+
+The goal is to ensure the algorithm for determining optimal box sizes performs accurately, efficiently, and flexibly. It must handle large order volumes, produce clear visual outputs, and adapt to new product dimensions or box types without extensive changes.
+
+Quality assurance involves testing the algorithm in various scenarios, performance testing, and usability assessments to ensure warehouse staff can effectively use the software. Regular code reviews and manual checks against physical tests, supported by automated testing, are essential to maintaining quality.
+
+The project follows \textit{ISO/IEC 25010:2011} standards, emphasizing security, performance, maintainability, and usability. Even as internal tools, security matters for data integrity and access control. CI pipelines (using GitHub Actions) with unit testing, automated reviews, and functional testing should be in place, overseen by a quality representative to ensure standards are met throughout development.
+
+\section{Prerequisites}
+
+Before starting the development of the cubing algorithm for Herbalife's distribution center, the following prerequisites need to be met:
+
+\begin{itemize}
+    \item \textbf{Product Data}:
+    \begin{itemize}
+        \item Access to real-world product data, including dimensions (length, width, height) for all products.
+    \end{itemize}
+    
+    \item \textbf{Box Specifications}:
+    \begin{itemize}
+        \item Detailed dimensions and types of all available packaging boxes, including any constraints such as volume thresholds for each box type.
+        \item Documentation regarding specific box selection rules and requirements from Herbalife’s shipping department.
+    \end{itemize}
+    
+    \item \textbf{Current Algorithm Overview}:
+    \begin{itemize}
+        \item A thorough understanding of the existing cubing algorithm currently in use, including any available documentation or source code. This is necessary to identify its limitations and areas for improvement.
+    \end{itemize}
+    
+    \item \textbf{Technical Tools}:
+    \begin{itemize}
+        \item Setup of development tools including Python (preferred version: Python 3.x), any required Python libraries (e.g., NumPy, pandas, Py3D, etc.), and version control via GitHub.
+        \item Access to GitHub Actions for continuous integration (CI) and version control, ensuring consistent tracking of code changes and collaborative development.
+    \end{itemize}
+    
+    \item \textbf{Stakeholder Requirements}:
+    \begin{itemize}
+        \item A clear understanding of the business requirements from the Product Owner (Marc Wilmsen) and other stakeholders, including any feedback loops or specific requirements for the visual representation of product packing.
+    \end{itemize}
+    
+    \item \textbf{Team Roles and Responsibilities}:
+    \begin{itemize}
+        \item Defined roles for all team members, particularly the responsibilities of the Scrum Master and developers during each sprint.
+        \item Access to project management tools such as GitHub Scrum Board to organize and track sprints, backlogs, and ongoing tasks.
+    \end{itemize}
+    
+    \item \textbf{Agile Framework Setup}:
+    \begin{itemize}
+        \item A finalized Agile Scrum framework in place, including sprint timelines (weekly sprints starting Thursday), planning, review, and retrospective processes to ensure continuous feedback and improvement.
+    \end{itemize}
+\end{itemize}
+
+\section{Risk Management}
+Effective risk management is crucial to the success of Project Cubing. This section outlines the potential risks, their impact on the project, and the mitigation strategies we will employ to manage them.
+
+\subsection{Risk Identification}
+We have identified the following key risks that may affect the project:
+\begin{itemize}
+    \item \textbf{Incorrect Box Selection Algorithm:} The new algorithm may not adequately account for specific product dimensions, resulting in incorrect box selections.
+    \item \textbf{Delayed Input Data:} The necessary input data (product dimensions and orders) may be delayed or incomplete, affecting project timelines.
+    \item \textbf{Integration with Existing Systems:} Challenges may arise when integrating the new solution with Herbalife's existing infrastructure, including data input/output in Excel format.
+    \item \textbf{Performance Issues:} The developed Python program may encounter performance issues, particularly when handling large volumes of data or complex product arrangements.
+    \item \textbf{Visual Representation Failures:} Generating a visual representation of product orientation may prove challenging, impacting the overall usability of the solution.
+    \item \textbf{Scope Creep:} The project may face scope creep due to additional feature requests, such as further optimizing the box size or creating more detailed visual outputs.
+\end{itemize}
+
+\subsection{Risk Impact and Probability}
+\begin{itemize}
+    \item \textbf{Incorrect Box Selection Algorithm:} High impact, medium probability. Incorrect selections can lead to significant operational inefficiencies.
+    \item \textbf{Delayed Input Data:} Medium impact, medium probability. Delays in input data can push back development timelines.
+    \item \textbf{Integration with Existing Systems:} High impact, low probability. Failure to integrate properly could hinder deployment of the solution.
+    \item \textbf{Performance Issues:} Medium impact, low probability. Performance bottlenecks could reduce efficiency but may be mitigated with optimization.
+    \item \textbf{Visual Representation Failures:} Low impact, medium probability. While nice-to-have, failure to implement this feature won’t halt the project.
+    \item \textbf{Scope Creep:} Medium impact, medium probability. Additional requests can extend development time and require more resources.
+\end{itemize}
+
+\subsection{Mitigation Strategies}
+To mitigate the identified risks, the following strategies will be implemented:
+\begin{itemize}
+    \item \textbf{Algorithm Testing:} Conduct thorough testing of the new algorithm to ensure it accounts for both product volume and dimensions.
+    \item \textbf{Regular Communication:} Maintain regular communication with stakeholders to ensure timely delivery of input data and avoid delays.
+    \item \textbf{Incremental Integration:} Integrate the solution in phases to identify and address any issues early in the process.
+    \item \textbf{Performance Optimization:} Apply performance optimization techniques and test on different data volumes to ensure efficiency.
+    \item \textbf{Prototyping Visuals:} Develop prototypes of the visual representation feature early, allowing time for adjustments if needed.
+    \item \textbf{Scope Management:} Clearly define the project scope at the outset and manage feature requests to avoid scope creep.
+\end{itemize}
+
+\subsection{Risk Monitoring and Control}
+Risks will be monitored throughout the project lifecycle during bi-weekly meetings. Any emerging risks will be logged, evaluated, and addressed in a timely manner to ensure the project remains on track.
+
+\section{Success Criteria}
+Here are the objectives that define the success criteria for the cubing algorithm project:
+
+\paragraph{Specific:} 
+The goal is to develop a robust and scalable cubing algorithm by the end of the project timeline that accurately places products into the most suitable box sizes, addressing the limitations of the current algorithm. The new algorithm will take into account both product dimensions and shapes (effectively "playing Tetris") to ensure efficient space utilization and avoid the current issues of selecting incorrect or oversized boxes.
+
+\paragraph{Measurable:} 
+Success will be measured by a significant reduction in the number of smaller boxes that require repackaging, aiming to decrease the current rate from 10\% to less than 5\%. This metric will be tracked by comparing the number of repacked boxes before and after the implementation of the new algorithm. The goal is to demonstrate that the new algorithm can consistently select appropriate box sizes and arrangements for smaller items, thereby minimizing the need for manual adjustments.
+
+\paragraph{Achievable:} 
+The project is achievable within the given timeframe, utilizing the team's experience in algorithm development and modern technologies. With continuous testing and feedback from stakeholders (such as Marc), the project can ensure the algorithm is both functional and effective in addressing the identified packing inefficiencies.
+
+\paragraph{Relevant:} 
+The project directly addresses the inefficiencies in Herbalife's current cubing algorithm, which leads to unnecessary labor costs, delays, and increased shipping expenses. By implementing a more efficient algorithm, the project aligns with the business's goals of optimizing the packing process and maintaining their promise of fast delivery.
+
+\paragraph{Time-bound:} 
+The new cubing algorithm is scheduled for completion and deployment by the end of the project timeline (December 23). The project milestones will be tracked through the Agile sprints, ensuring steady progress and timely delivery of the final solution.
+
+
+\section{WBS}
+
+Each phase is further broken down into work packages (e.g., data analysis, algorithm development), and these are subdivided into specific activities (e.g., grouping products, researching algorithms, testing with real-world data). This structure helps in organizing, monitoring, and ensuring that all tasks are addressed in a structured manner.
+
+
+
+
+
+
+
+
+\begin{figure}[h] 
+    \centering 
+    \includegraphics[width=0.8\textwidth]{workbreakStructure.jpg}
+    \caption{Work Breakdown Structure}
+    \label{fig:wbs}
+\end{figure}
+
+
+\end{document}

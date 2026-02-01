@@ -1,0 +1,45 @@
+LayerResult [LinkedList]
+- Pivotpoint [xyz values]
+- Products [array<Product>]
+- Layerheight
++ doesFit (Rough check)
++ LayerVolume [float]
+
+Box
+- Layers [array<Layer>]
++ addLayer
+
+Algorithm [Interface]
++ DoesFit(box, item) [bool]
++ PlaceItem(box, item)
+
+OrderManager
++ Sorting
+
+a*Order
+- All items in order
+- Ordernr
++ Amount of items
+- ?Date&Time?
+
+a*OrderResult
+- Ordernr
+- Boxes [array<Box>]
+
+Packer
++ Process order
++ InitializeLayer
++ PlaceItem [biggest item first]
++ PlaceItem [Using the chosen algorithm]
++ Process remaining items
++ Finalize packing
+
+? CheckHistory
+? StoreHistory
+? Rotator
++ (Get possible orientations) [Enum definition?]
++ RotateItem
+
++ = function
+- = variable
+? = Not part of MVP, but important for the end

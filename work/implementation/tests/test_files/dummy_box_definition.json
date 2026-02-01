@@ -1,0 +1,99 @@
+[
+    {
+        "length": 330,
+        "height": 35,
+        "width": 245,
+        "weight": 30,
+        "max_weight": 19970,
+        "description": "Envelope",
+        "container_type": "ENV",
+        "remark": "Envelope",
+        "max_fill_percentage": 80.0,
+        "min_fill_percentage": 5.0
+    },
+    {
+        "length": 510,
+        "height": 400,
+        "width": 415,
+        "weight": 905,
+        "max_weight": 19095,
+        "description": "Carton large",
+        "container_type": "L",
+        "remark": "Large cartons 6006360A-00",
+        "max_fill_percentage": 80.0,
+        "min_fill_percentage": 5.0
+    },
+
+    {
+        "length": 510,
+        "height": 300,
+        "width": 415,
+        "weight": 805,
+        "max_weight": 19195,
+        "description": "Carton medium",
+        "container_type": "M",
+        "remark": "Medium cartons 6006370A-00",
+        "max_fill_percentage": 80.0,
+        "min_fill_percentage": 5.0
+    },
+    {
+        "length": 410,
+        "height": 300,
+        "width": 240,
+        "weight": 430,
+        "max_weight": 19570,
+        "description": "Carton small",
+        "container_type": "S",
+        "remark": "Small cartons 6006380V1-00",
+        "max_fill_percentage": 80.0,
+        "min_fill_percentage": 5.0
+    },
+    {
+        "length": 410,
+        "height": 120,
+        "width": 240,
+        "weight": 189,
+        "max_weight": 19811,
+        "description": "Carton extra small",
+        "container_type": "XS",
+        "remark": "Extra small cartons 6006390V1-00",
+        "max_fill_percentage": 80.0,
+        "min_fill_percentage": 5.0
+    },
+    {
+        "length": 236,
+        "height": 115,
+        "width": 115,
+        "weight": 93,
+        "max_weight": 5000,
+        "description": "Carton Under-filled - Dum",
+        "container_type": "XSD",
+        "remark": "Carton Under file (XSD) 6006",
+        "max_fill_percentage": 80.0,
+        "min_fill_percentage": 5.0
+    },
+    {
+        "length": 1,
+        "height": 1,
+        "width": 1,
+        "weight": 133,
+        "max_weight": 19867,
+        "description": "Carton Undersized",
+        "container_type": "XXS",
+        "remark": "Undersized cartons",
+        "max_fill_percentage": 100.0,
+        "min_fill_percentage": 0.0
+    },
+    {
+        "length": 250,
+        "height": 210,
+        "width": 115,
+        "weight": 125,
+        "max_weight": 5000,
+        "description": "Multi order carton",
+        "container_type": "MXS",
+        "remark": "Multi order carton 6006260B",
+        "max_fill_percentage": 80.0,
+        "min_fill_percentage": 5.0
+    }
+]

@@ -1,0 +1,9 @@
+﻿Container type,Description,Length,Height,Width,Max. weight content,Tare weight box,Remark,,
+ENV,Envelope,330,35,245,19970,30,Envelope,,
+L,Carton large,510,400,415,19095,905,Large cartons 6006360A-00,,
+M,Carton medium,510,300,415,19195,805,Medium cartons 6006370A-00,,
+S,Carton small,410,300,240,19570,430,Small cartons 6006380V1-00,,
+XS,Carton extra small,410,120,240,19811,189,Extra small cartons 6006390V1-00,,
+XSD,Carton Under-filled - Dum,236,115,115,5000,93,Carton Under file (XSD) 6006270A,,used when fill degree is less then 5%
+XXS,Carton Undersized,1,1,1,19867,133,Undersized cartons,,
+MXS,Multi order carton,250,210,115,5000,125,Multi order carton 6006260B,,

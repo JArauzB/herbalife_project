@@ -1,0 +1,180 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\title{Business Case Herbalife}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\noindent \textbf{DATE:} \today \\[0.5em]
+\textbf{PROJECT NAME:} Cubing algorithm \\[0.5em]
+\textbf{SUBMITTED BY:} Tim Baars, Gabriele Lavinskaitė, Julian Köser and Jorge Arauz\\[0.5em]
+\textbf{PROJECT APPROVED BY:} George Chaaya and Marc Wilmsen\\[0.5em]
+\textbf{DATE APPROVED:} \today \\[0.5em]
+
+\hrule
+\vspace{1em}
+
+\section*{Executive Summary}
+
+The current system at Herbalife's distribution center in Venray places products into boxes based solely on volume calculations. This approach fails to account for the specific measurements of different products, leading to frequent instances where products are too large for the assigned boxes. As a result, the boxes need to be repacked, which introduces inefficiencies and delays in the packing process.
+
+This project, "Project Cubing," aims to develop a Python-based cubing algorithm that will optimize the packing process by considering both product dimensions and box sizes. By using this algorithm, the system will ensure that products are placed into appropriately sized boxes, minimizing the need for repacking and reducing labor costs. This solution will improve the overall efficiency of the packing workflow, leading to smoother operations at the distribution center.
+
+\section*{Problem}
+
+The current packing method at Herbalife’s Venray distribution center has a significant drawback: it relies solely on volume calculations without considering the actual dimensions of individual products. This approach often results in oversized items being placed into boxes that are too small, which necessitates repacking. The consequence is inefficient use of time, increased labor costs, and operational bottlenecks.
+
+This misalignment with the distribution center’s goal of optimizing efficiency has a direct negative impact on productivity. The need to repack also introduces risks such as product damage and delays in shipping, which can hurt overall customer satisfaction and hinder efforts to maintain streamlined operations.
+
+\section*{Analysis}
+
+Research indicates that the root cause of the inefficiency is the failure to account for product dimensions when packing orders. While volume-based calculations provide a basic guide, they are insufficient for ensuring products fit correctly in their assigned boxes. This oversight leads to repacking, increasing operational costs and slowing down the fulfillment process.
+
+The project team consists of software developers and stakeholders from Herbalife’s warehouse management and IT teams. Together, they aim to develop a solution that integrates product-specific measurements into the packing algorithm, ensuring more accurate box selection. In addition, input from warehouse staff will be leveraged to refine the packing process and ensure its practicality in real-world scenarios.
+
+\section*{Finances} 
+% @Gabriele
+This project does not incur any direct costs, as no additional licenses, hardware, or software purchases are required for development. The project leverages existing resources, such as open-source software tools, which ensures there are no significant expenses involved.
+
+\subsection*{Cost Breakdown}
+
+\begin{itemize}
+    \item \textbf{Development Costs}: $0$ (Utilizing open-source technologies)
+    \item \textbf{Licensing Fees}: $0$ (No proprietary software is required)
+    \item \textbf{Infrastructure Costs}: $0$ (The project will be developed locally on existing machines)
+\end{itemize}
+
+\subsection*{Potential Financial Benefits}
+Although there are no direct costs, the project is expected to generate significant financial benefits, including:
+
+\begin{itemize}
+    \item \textbf{Improved Packing Efficiency}: By optimizing the cubing algorithm, the project aims to reduce the number of repacked boxes and minimize the usage of oversized boxes. This will lead to cost savings on shipping, packaging materials, and labor.
+    \item \textbf{Reduction in Manual Labor}: The improved algorithm will automate more of the packaging process, reducing the need for manual intervention, which can lead to lower labor costs.
+    \item \textbf{Sustainability Savings}: Efficient packing leads to fewer shipments, reducing environmental impact, which may contribute to long-term cost savings related to corporate sustainability goals.
+\end{itemize}
+
+By increasing operational efficiency and minimizing packaging costs, this project has the potential to provide indirect financial benefits without the need for upfront financial investments.
+
+
+\section*{Possible Options}
+% @Gabriele
+The following section outlines various potential solutions to address the identified problem in the cubing algorithm. Each option presents different approaches with varying levels of complexity, efficiency, and adaptability.
+
+\begin{itemize}
+
+    \item \textbf{Option 1: Implement a New Heuristic-Based Algorithm}
+    \begin{itemize}
+        \item Develop a new algorithm based on heuristic approaches such as Genetic Algorithms (GA) or Simulated Annealing (SA).
+        \item These methods can improve packing efficiency by exploring multiple potential solutions.
+        \item Pros: Can achieve near-optimal packing efficiency and adapt to various item sizes and shapes.
+        \item Cons: Increased computational complexity, requiring more processing time and resources.
+    \end{itemize}
+    
+    \item \textbf{Option 2: Develop a Hybrid Solution}
+    \begin{itemize}
+        \item Combine multiple strategies, such as Best Fit Decreasing with Genetic Algorithms, to leverage the strengths of each approach.
+        \item This solution can balance efficiency and computational complexity, providing a more adaptable packing solution.
+        \item Pros: Offers a good trade-off between packing efficiency and processing speed.
+        \item Cons: Implementation can be complex, requiring more development time and testing.
+    \end{itemize}
+    
+\end{itemize}
+
+
+\section*{Risks}
+
+The following potential risks have been identified for the Project Cubing, along with their descriptions, risk owners, probabilities, impacts, and proposed countermeasures:
+
+\begin{itemize}
+
+    \item \textbf{Incorrect Box Selection Algorithm}
+    \begin{itemize}
+        \item \textbf{Description:} The new algorithm may not adequately account for specific product dimensions, resulting in incorrect box selections.
+        \item \textbf{Risk Owner:} Development Team
+        \item \textbf{Probability:} Medium
+        \item \textbf{Impact:} High
+        \item \textbf{Countermeasure:} Conduct thorough testing of the algorithm to ensure it accurately selects appropriate box sizes for various product dimensions.
+    \end{itemize}
+
+    \item \textbf{Performance Issues}
+    \begin{itemize}
+        \item \textbf{Description:} The developed Python program may encounter performance issues, particularly when handling large volumes of data or complex product arrangements.
+        \item \textbf{Risk Owner:} Development Team
+        \item \textbf{Probability:} Medium
+        \item \textbf{Impact:} Medium
+        \item \textbf{Countermeasure:} Apply performance optimization techniques and conduct stress tests to ensure the program can handle expected loads.
+    \end{itemize}
+
+    \item \textbf{Scope Creep}
+    \begin{itemize}
+        \item \textbf{Description:} The project may face scope creep due to additional feature requests, such as further optimizing the box size or creating more detailed visual outputs.
+        \item \textbf{Risk Owner:} Project Manager
+        \item \textbf{Probability:} Medium
+        \item \textbf{Impact:} Medium
+        \item \textbf{Countermeasure:} Clearly define the project scope at the outset and manage feature requests to avoid scope creep.
+    \end{itemize}
+
+    \item \textbf{Incomplete or Inaccurate Data}
+    \begin{itemize}
+        \item \textbf{Description:} There is a risk that the product dimension data may be incomplete or inaccurate, leading to incorrect box size recommendations.
+        \item \textbf{Risk Owner:} Data Management Team
+        \item \textbf{Probability:} Medium
+        \item \textbf{Impact:} High
+        \item \textbf{Countermeasure:} Implement a thorough data validation process, including cross-checking dimensions with physical inventory and using automated tools to flag inconsistencies.
+    \end{itemize}
+
+    \item \textbf{Integration Issues with Legacy Systems}
+    \begin{itemize}
+        \item \textbf{Description:} The new cubing algorithm may face challenges when integrating with existing warehouse management systems.
+        \item \textbf{Risk Owner:} IT Development Team
+        \item \textbf{Probability:} Medium
+        \item \textbf{Impact:} High
+        \item \textbf{Countermeasure:} Conduct a comprehensive systems compatibility analysis early in the project and allocate time for extensive testing during the integration phase.
+    \end{itemize}
+
+    \item \textbf{Delays in Development Timeline}
+    \begin{itemize}
+        \item \textbf{Description:} Development of the cubing algorithm could encounter unforeseen technical challenges, leading to delays.
+        \item \textbf{Risk Owner:} Project Manager
+        \item \textbf{Probability:} High
+        \item \textbf{Impact:} Medium
+        \item \textbf{Countermeasure:} Establish a buffer in the project timeline for unexpected issues and maintain regular progress reviews to identify potential delays early.
+    \end{itemize}
+
+    \item \textbf{Lack of Stakeholder Engagement}
+    \begin{itemize}
+        \item \textbf{Description:} Key stakeholders may not be adequately engaged throughout the project, leading to misalignment with business goals.
+        \item \textbf{Risk Owner:} Project Manager
+        \item \textbf{Probability:} Medium
+        \item \textbf{Impact:} High
+        \item \textbf{Countermeasure:} Schedule regular stakeholder meetings to provide updates and gather feedback, ensuring that all parties are involved in decision-making processes.
+    \end{itemize}
+\end{itemize}
+
+
+\section*{Recommendation}
+
+Based on the analysis and identified risks, the recommended approach is to proceed with the development of the Cubing Algorithm. This solution is the best option for addressing the inefficiencies in the current packing process at Herbalife's Venray distribution center.
+
+The project focuses on optimizing box selection by incorporating product dimensions, which will significantly reduce the need for repacking and associated labor costs. This enhancement aligns with the organization's goal of maximizing operational efficiency and improving customer satisfaction.
+
+To mitigate the risks associated with the project, the following strategies will be implemented:
+\begin{itemize}
+    \item \textbf{Comprehensive Testing:} Before full deployment, rigorous testing will be conducted to ensure the algorithm accurately calculates optimal box sizes and effectively reduces repacking instances.
+    
+    \item \textbf{Stakeholder Engagement:} Continuous communication with the Product owner and IT teams will be maintained throughout the development process to gather feedback and ensure the solution meets practical needs.
+    
+    \item \textbf{Data Validation:} Implement data validation processes to ensure the accuracy of product dimensions and other relevant inputs used by the algorithm.
+\end{itemize}
+
+By following these recommendations, we can effectively implement a robust packing solution that enhances efficiency and reduces operational risks in the distribution center.
+
+\end{document}

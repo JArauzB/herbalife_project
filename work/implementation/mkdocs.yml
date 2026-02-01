@@ -1,0 +1,89 @@
+site_name: HerbaLife - Packing Algorithm Documentation
+
+theme:
+  name: mkdocs
+  # name: readthedocs
+  locale: en
+  color_mode: auto
+  user_color_mode_toggle: true
+  nav_style: primary
+  highlightjs: true
+  shortcuts:
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
+
+markdown_extensions:
+  - toc:
+      baselevel: -1 # mkdocs
+      # baselevel: 0 # readthedocs
+      toc_depth: 6
+
+plugins:
+- search:
+    indexing: full
+- mkdocstrings:
+    default_handler: python
+    handlers:
+      python:
+        options:
+          show_source: false
+          heading_level: 1
+          show_root_toc_entry: false
+          show_category_heading: true
+          show_symbol_type_heading: true
+          show_symbol_type_toc: true
+
+nav:
+- Homepage: index.md
+# - Overview: overview.md
+- Algorithm:
+  - Overview: algorithm/overview.md
+  - Usage: algorithm/usage.md
+  - Classes:
+    - BoxDefinition: algorithm/box_definition.md
+    - BoxInputReader: algorithm/box_input_reader.md
+    - BoxResult: algorithm/box_result.md
+    - Fragment: algorithm/fragment.md
+    - LayerResult: algorithm/layer_result.md
+    - OrderResult: algorithm/order_result.md
+    - Order: algorithm/order.md
+    - OrderInputReader: algorithm/order_input_reader.md
+    - OrderManager: algorithm/order_manager.md
+    - Packer: algorithm/packer.md
+    - Position: algorithm/position.md
+    - Product: algorithm/product.md
+    - ProductInputReader: algorithm/product_input_reader.md
+    - RotationType: algorithm/rotation_type.md
+    - System: algorithm/system.md
+- Visualisation:
+  - Overview: visualization/overview.md
+  - Usage: visualization/usage.md
+  - Classes:
+    - Box: visualization/box.md
+    - CSV Reader: visualization/csv_reader.md
+    - Item: visualization/item.md
+    - Order: visualization/order.md
+    - Painter: visualization/painter.md
+- Tests:
+  - Overview: tests/overview.md
+  - Usage: tests/usage.md
+  - Tests:
+    - test_algorithm_box_definition: tests/test_algorithm_box_definition.md
+    - test_algorithm_box_input_reader: tests/test_algorithm_box_input_reader.md
+    - test_algorithm_box_result: tests/test_algorithm_box_result.md
+    - test_algorithm_layer_result: tests/test_algorithm_layer_result.md
+    - test_algorithm_order_input_reader: tests/test_algorithm_order_input_reader.md
+    - test_algorithm_order_manager: tests/test_algorithm_order_manager.md
+    - test_algorithm_order_result: tests/test_algorithm_order_result.md
+    - test_algorithm_order: tests/test_algorithm_order.md
+    - test_algorithm_packer: tests/test_algorithm_packer.md
+    - test_algorithm_product_input_reader: tests/test_algorithm_product_input_reader.md
+    - test_algorithm_product: tests/test_algorithm_product.md
+    - test_algorithm_rotation_type: tests/test_algorithm_rotation_type.md
+    - test_algorithm_system: tests/test_algorithm_system.md
+    - test_visualization_box: tests/test_visualization_box.md
+    - test_visualization_csv_reader: tests/test_visualization_csv_reader.md
+    - test_visualization_item: tests/test_visualization_item.md
+    - test_visualization_order: tests/test_visualization_order.md
+    - test_visualization_painter: tests/test_visualization_painter.md
